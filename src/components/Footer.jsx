@@ -19,34 +19,10 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
                   handleNavClick("home");
                 }}
               >
-                Simone
+                Mariano
               </a>
               . All Rights Reserved.
             </p>
-          </div>
-          <div className="col-lg-6">
-            <ul className="nav nav-separator justify-content-center justify-content-lg-end">
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#terms-policy"
-                  href="#terms-policy"
-                >
-                  Terms &amp; Policy
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  data-bs-toggle="modal"
-                  data-bs-target="#disclaimer"
-                  href="#disclaimer"
-                >
-                  Disclaimer
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

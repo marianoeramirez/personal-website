@@ -4,50 +4,55 @@ import resumeFile from "../documents/resume.pdf";
 const Resume = ({ classicHeader, darkTheme }) => {
   const educationDetails = [
     {
-      yearRange: "2000 - 2004",
-      title: "Computer Science",
-      place: "International University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "Aug 2020",
+      title: "Data Engineering Nanodegree",
+      place: "Online",
+      desc: "Data engineers course that teach about how to make data accessible to all the people who use it across an organization. That could mean creating a data warehouse for the analytics team, building a data pipeline for a frontend application, or summarizing massive datasets to be more user-friendly.",
     },
     {
-      yearRange: "2005 - 2008",
-      title: "Bachelor Degree",
-      place: "University of California",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2019",
+      title: "Diploma in Data Science, Machine Learning and its applications",
+      place: "National University of Cordoba",
+      desc: "In this diploma i learn about interdisciplinary data collection and examination techniques, data visualization, statistical and computational analytics, presentation skills, and how to apply the fundamental core concepts, and tools of data thinking to mine work in any industry or sector.",
     },
-    {
-      yearRange: "2009 - 2012",
-      title: "Master Degree",
-      place: "Harvard University",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    },
+    
   ];
 
   const experienceDetails = [
     {
-      yearRange: "2012 - 2013",
-      title: "Jr. UI UX Designer",
-      place: "Themeforest",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "2021 - Present",
+      title: "Full Stack Engineer",
+      place: "Headspace Health",
+      desc: "Responsible for architecting and developing new features, optimizing and maintaining existing Django codebase, for mentail health company.",
     },
     {
-      yearRange: "2014 - 2016",
-      title: "Jr. Product Designer",
-      place: "Dribbble",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "Jan 2021 - Mar. 2021",
+      title: "Backend Python Engineer",
+      place: "VENMO",
+      desc: "Design and implement new services using cutting-edge technologies to support our client in achieving its business goals.",
     },
     {
-      yearRange: "2017 - 2019",
-      title: "Product Designer",
-      place: "Adobe",
-      desc: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      yearRange: "Aug 2018 - Jan 2021",
+      title: "Full-Stack Lead Engineer",
+      place: "MDPPS",
+      desc: "Design, build and maintain distributed and scalable data-processing systems deployed on GCP with Kubernetes and Docker.",
+    },
+    {
+      yearRange: "Nov 2013 - Aug 2018",
+      title: "Full-Stack Lead Engineer",
+      place: "BrightComms",
+      desc: "I work with this telecomunication company for almost 5 years, i was in charge of the development of the company's main product, a web application for the management of mobile telephony services.",
     },
   ];
 
   const skills = [
     {
-      name: "Web Design",
-      percent: 65,
+      name: "Python Development",
+      percent: 99,
+    },
+    {
+      name: "Django Development",
+      percent: 100,
     },
     {
       name: "HTML/CSS",
@@ -62,12 +67,24 @@ const Resume = ({ classicHeader, darkTheme }) => {
       percent: 70,
     },
     {
-      name: "Angular Js",
+      name: "Flutter",
       percent: 60,
     },
     {
-      name: "Bootstrap",
-      percent: 99,
+      name: "Android / Java",
+      percent: 70,
+    },
+    {
+      name: "PostgreSQL, Postgis",
+      percent: 90,
+    },
+    {
+      name: "Kubernetes",
+      percent: 90,
+    },
+    {
+      name: "Rust",
+      percent: 50,
     },
   ];
 
@@ -186,7 +203,7 @@ const Resume = ({ classicHeader, darkTheme }) => {
                   }
                 >
                   {skill.name}{" "}
-                  <span className="float-end">{skill.percent}%</span>
+                  <span className="float-end" style={{display:"none"}}>{skill.percent}%</span>
                 </p>
                 <div
                   className={

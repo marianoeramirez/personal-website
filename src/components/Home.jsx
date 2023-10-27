@@ -35,20 +35,20 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   <Typewriter
                     options={{
                       strings: [
-                        "I'm Simone Olivia.",
-                        "I'm a Freelancer.",
-                        "I'm a Photographer.",
-                        "I'm a Designer.",
+                        "I'm Mariano Ramirez",
+                        "I'm a Full Stack Engineer",
+                        "I'm a IT professional",
+                        "I'm a DevOps evangelist",
                       ],
                       autoStart: true,
                       loop: true,
                     }}
                   />
                 </h2>
-                <p className="text-5 text-light mb-4">
+                {/* <p className="text-5 text-light mb-4">
                   based in Los Angeles, California.
-                </p>
-                <a
+                </p> */}
+                {/* <a
                   href="#contact"
                   className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
                   onClick={(e) => {
@@ -57,7 +57,7 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                   }}
                 >
                   Hire Me
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
