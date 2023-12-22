@@ -1,14 +1,11 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import videobg from "../videos/home.mp4";
 
 const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
   return (
     <section id="home">
       <div className="hero-wrap">
         <div className="hero-mask opacity-8 bg-dark" />
-
-        {/* ---------------image background------------------ */}
         <div
           className="hero-bg parallax"
           style={{ backgroundImage: 'url("images/intro-bg.jpg")' }}

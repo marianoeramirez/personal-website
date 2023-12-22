@@ -5,7 +5,7 @@ import AboutUs from "./components/About";
 import Services from "./components/Services";
 import Resume from "./components/Resume";
 // import Portfolio from "./components/Portfolio";
-// import Testimonials from "./components/Testimonials";
+import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
@@ -82,11 +82,11 @@ function App() {
             {/* <Portfolio
               classicHeader={classicHeader}
               darkTheme={darkTheme}
-            ></Portfolio>
-            <Testimonials
+            ></Portfolio>*/}
+            <Blog
               classicHeader={classicHeader}
               darkTheme={darkTheme}
-            ></Testimonials> */}
+            ></Blog> 
             <Contact
               classicHeader={classicHeader}
               darkTheme={darkTheme}
