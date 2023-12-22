@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-
+import {
+  NavLink,
+} from "react-router-dom";
 import {getPosts} from "../api/requests";
 
 const Blog = ({ classicHeader, darkTheme }) => {
@@ -78,7 +80,10 @@ const Blog = ({ classicHeader, darkTheme }) => {
                           (darkTheme ? "text-white" : "text-dark")
                         }
                       >
-                        {value.title}
+                        <NavLink
+                    to={`post/${value.id}`}
+                    >
+                        {value.title}</NavLink>
                       </strong>
                       <br />
                       <span
@@ -92,15 +97,7 @@ const Blog = ({ classicHeader, darkTheme }) => {
                       </span>
                     </p>
                   </div>
-                  {/* <div
-                    className={
-                      "text-8 " +
-                      (darkTheme ? "text-white" : "text-dark")
-                    }
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: value.content }} />
-                  </div> */}
-
+                 
                 </div>
               </div>
             ))}

@@ -1,17 +1,30 @@
 import "./App.scss";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import AboutUs from "./components/About";
-import Services from "./components/Services";
-import Resume from "./components/Resume";
-// import Portfolio from "./components/Portfolio";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
+
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { commonConfig } from "./config/commonConfig";
 import PreLoader from "./components/Preloader";
 import { Tooltip } from "./components/Tooltip";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Root from "./routes/root";
+import Post, {loader as postLoader} from "./components/Post";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+  },
+  {
+    path: "post/:postId",
+    element: <Post />,
+    loader: postLoader,
+  },
+]);
 
 function App() {
   const classicHeader = commonConfig.classicHeader;
@@ -61,37 +74,12 @@ function App() {
 
         <div id="main-wrapper">
           <Header handleNavClick={handleNavClick}></Header>
-          <div id="content" role="main">
-            <Home
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-              handleNavClick={handleNavClick}
-            ></Home>
-            <AboutUs
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></AboutUs>
-            <Services
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Services>
-            <Resume
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Resume>
-            {/* <Portfolio
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Portfolio>*/}
-            <Blog
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Blog> 
-            <Contact
-              classicHeader={classicHeader}
-              darkTheme={darkTheme}
-            ></Contact>
-          </div>
+          
+            <div id="content" role="main">
+            <RouterProvider router={router} />
+            </div>
+
+          
           <Footer
             classicHeader={classicHeader}
             darkTheme={darkTheme}

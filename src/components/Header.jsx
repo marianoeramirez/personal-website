@@ -24,7 +24,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
             <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
               <img
                 className="img-fluid rounded-pill d-block"
-                src="images/mariano.png"
+                src="/images/mariano.png"
                 title="I'm Mariano"
                 alt="profile"
               />
@@ -95,6 +95,8 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   What I Do
                 </Link>
               </li>
+              
+              
               <li className="nav-item">
                 <Link
                   className="nav-link "
@@ -110,6 +112,23 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                   }}
                 >
                   Resume
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link "
+                  smooth
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeClass="active"
+                  spy
+                  to="blog"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsNavModalClose(true);
+                  }}
+                >
+                  Blog
                 </Link>
               </li>
               <li className="nav-item">
