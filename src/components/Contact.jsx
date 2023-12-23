@@ -14,10 +14,10 @@ const Contact = ({ classicHeader, darkTheme }) => {
     setSendingMail(true);
     emailjs
       .sendForm(
-        "service_i86k3ms",
-        "template_si6cin9",
+        "service_k2xhovj",
+        "template_t47rpbl",
         form.current,
-        "c9HsDgGF0tvWyVnAL"
+        "cOHtc_r0aJ7kqnu5p"
       )
       .then(
         (result) => {
@@ -160,8 +160,6 @@ const Contact = ({ classicHeader, darkTheme }) => {
             <form
               className={darkTheme ? "form-dark" : ""}
               id="contact-form"
-              action="php/mail.php"
-              method="post"
               ref={form}
               onSubmit={sendEmail}
             >
