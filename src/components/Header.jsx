@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Tooltip } from "./Tooltip";
 import { Link } from "react-scroll";
+import { Link as RouterLInk } from "react-router-dom";
 
 const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
   const [isNavModalClose, setIsNavModalClose] = useState(true);
@@ -77,6 +78,15 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
                 >
                   About Me
                 </Link>
+              </li>
+              
+              <li className="nav-item">
+                <RouterLInk
+                  className="nav-link "
+                  to={'/#about'}
+                >
+                  About Me
+                </RouterLInk>
               </li>
               <li className="nav-item">
                 <Link

@@ -1,5 +1,6 @@
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en'
+import { commonConfig } from '../config/commonConfig';
 
 
 class Post {
@@ -13,13 +14,12 @@ class Post {
     }
 }
 
-const apiKey = 'AIzaSyATSLdFfEua2XNH5WdaIFfMYM55b1s_rhw';
-const blogId = '3040540087092322309';
+
 TimeAgo.addDefaultLocale(en)
 var timeAgo = new TimeAgo('en-US')
 
 export async function getPosts() {
-    const url = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts?key=${apiKey}&maxResults=20`;
+    const url = `https://www.googleapis.com/blogger/v3/blogs/${commonConfig.blogId}/posts?key=${commonConfig.apiKey}&maxResults=20`;
     try {
         const response = await fetch(url);
         if (response.ok) {
@@ -40,7 +40,7 @@ export async function getPosts() {
 }
 
 export async function getPost(postId) {
-    const url = `https://www.googleapis.com/blogger/v3/blogs/${blogId}/posts/${postId}?key=${apiKey}`;
+    const url = `https://www.googleapis.com/blogger/v3/blogs/${commonConfig.blogId}/posts/${postId}?key=${commonConfig.apiKey}`;
 
     try {
         const response = await fetch(url);

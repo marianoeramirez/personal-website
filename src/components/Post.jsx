@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {getPost} from "../api/requests";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
-
-export async function loader({ params }) {
-  const post = await getPost(params.postId);
-  return { post };
-}
 
 const Post = ({ darkTheme, params }) => {
 
