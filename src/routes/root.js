@@ -11,17 +11,14 @@ import Header from "../components/Header";
 
 
 export default function Root() {
-  const handleNavClick = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
-  };
   
     return (<Page>
-      <Header handleNavClick={handleNavClick}></Header>
-        <Home handleNavClick={handleNavClick} />
-        <AboutUs handleNavClick={handleNavClick}  />
-        <Services handleNavClick={handleNavClick}  />
-        <Resume handleNavClick={handleNavClick}  />
-        <Blog handleNavClick={handleNavClick}  /> 
-        <Contact handleNavClick={handleNavClick}  />
+      <Header />
+        <Home  />
+        <AboutUs   />
+        <Services   />
+        <Resume   />
+        <Blog   /> 
+        <Contact   />
     </Page>)
 }
