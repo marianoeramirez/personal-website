@@ -1,7 +1,8 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { Link  } from "react-router-dom";
 
-const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Home = () => {
   return (
     <section id="home">
       <div className="hero-wrap">
@@ -11,17 +12,6 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
           style={{ backgroundImage: 'url("images/intro-bg.jpg")' }}
         ></div>
 
-        {/* -------------------video background---------------------- */}
-
-        {/* <div className="player hero-bg parallax">
-          <video
-            src={videobg}
-            autoPlay
-            muted
-            loop
-            style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-          ></video>
-        </div> */}
 
         <div className="hero-content section d-flex min-vh-100">
           <div className="container my-auto">
@@ -42,34 +32,17 @@ const Home = ({ classicHeader, darkTheme, handleNavClick }) => {
                     }}
                   />
                 </h2>
-                {/* <p className="text-5 text-light mb-4">
-                  based in Los Angeles, California.
-                </p> */}
-                {/* <a
-                  href="#contact"
-                  className="btn btn-outline-primary rounded-pill shadow-none smooth-scroll mt-2"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick("contact");
-                  }}
-                >
-                  Hire Me
-                </a> */}
               </div>
             </div>
           </div>
-          <a
-            href="#about"
+          <Link
+            to="/#about"
             className="scroll-down-arrow text-white smooth-scroll"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick("about");
-            }}
           >
             <span className="animated">
               <i className="fa fa-chevron-down" />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

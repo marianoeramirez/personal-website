@@ -95,13 +95,18 @@ const Contact = ({ classicHeader, darkTheme }) => {
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-phone" />
               </span>
+              <a href="tel:+58 (412) 728 59 15">
               +58 (412) 728 59 15
+              </a>
+              
             </p>
             <p className={"text-3 mb-4 " + (darkTheme ? "text-light" : "")}>
               <span className="text-primary text-4 me-2">
                 <i className="fas fa-envelope" />
               </span>
+              <a href="mailto:me@marianoeramirez.com">
               me@marianoeramirez.com
+              </a>
             </p>
             <h2
               className={

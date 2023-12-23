@@ -1,6 +1,7 @@
 import React from "react";
+import { Link  } from "react-router-dom";
 
-const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
+const Footer = ({ classicHeader, darkTheme }) => {
   return (
     <footer
       id="footer"
@@ -10,17 +11,14 @@ const Footer = ({ classicHeader, darkTheme, handleNavClick }) => {
         <div className="row">
           <div className="col-lg-6 text-center text-lg-start">
             <p className="mb-3 mb-lg-0">
-              Copyright © 2023{" "}
-              <a
-                href="#home"
+              Copyright © 2024{" "}
+              <Link
+                to="/#home"
                 className="fw-500"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick("home");
-                }}
+                
               >
-                Mariano
-              </a>
+                Mariano Ramirez
+              </Link>
               . All Rights Reserved.
             </p>
           </div>

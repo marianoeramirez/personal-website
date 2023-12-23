@@ -4,23 +4,20 @@ import Header from "./Header";
 import Footer from "./Footer";
 import PreLoader from "./Preloader";
 import { Tooltip } from "./Tooltip";
-import { commonConfig } from "../config/commonConfig";
+import ScrollToAnchor from './ScrollToAnchor';
 
 const Page = ({ children }) => {
-    
-  const [isLoading, setisLoading] = useState(true);
-  useEffect(() => {
-    const loadingTimeout = setTimeout(() => {
-      setisLoading(false);
-    }, 1000);
-    return () => {
-      clearTimeout(loadingTimeout);
-    };
-  }, []);
 
-  const handleNavClick = (section) => {
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
-  };
+  var isLoading = false;
+  // const [isLoading, setisLoading] = useState(true);
+  // useEffect(() => {
+  //   const loadingTimeout = setTimeout(() => {
+  //     setisLoading(false);
+  //   }, 1000);
+  //   return () => {
+  //     clearTimeout(loadingTimeout);
+  //   };
+  // }, []);
   
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
   const checkScrollTop = () => {
@@ -42,6 +39,7 @@ const Page = ({ children }) => {
   }
 
     return <>
+      <ScrollToAnchor />
       <div
         style={{ position: "relative" }}
         className={"side-header"}
@@ -49,14 +47,12 @@ const Page = ({ children }) => {
         {isLoading && <PreLoader></PreLoader>}
 
         <div id="main-wrapper">
-          <Header handleNavClick={handleNavClick}></Header>
+          <Header></Header>
           
             <div id="content" role="main">
             {children}
             </div>
-          <Footer
-            handleNavClick={handleNavClick}
-          ></Footer>
+          <Footer></Footer>
         </div>
         <Tooltip text="Back to Top" placement="left">
           <span

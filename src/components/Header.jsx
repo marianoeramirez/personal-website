@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Tooltip } from "./Tooltip";
-import { Link } from "react-scroll";
-import { Link as RouterLInk } from "react-router-dom";
+import { Link  } from "react-router-dom";
 
-const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
+const Header = () => {
   const [isNavModalClose, setIsNavModalClose] = useState(true);
   return (
     <header id="header" className="sticky-top">
@@ -12,16 +11,9 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
         <div className="container-fluid position-relative h-100 flex-lg-column ps-3 px-lg-3 pt-lg-3 pb-lg-2">
           {/* Logo */}
           <Link
-            smooth
-            duration={500}
-            style={{ cursor: "pointer" }}
-            to="home"
-            className="mb-lg-auto mt-lg-4"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsNavModalClose(true);
-            }}
-          >
+                className="mb-lg-auto mt-lg-4"
+                to={'/#home'}
+              >
             <span className="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block">
               <img
                 className="img-fluid rounded-pill d-block"
@@ -45,19 +37,9 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
           >
             <ul className="navbar-nav text-lg-center my-lg-auto py-lg-3">
               <li className="nav-item">
-                <Link
-                  target={homeRef}
+              <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="home"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#home'}
                 >
                   Home
                 </Link>
@@ -65,42 +47,15 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               <li className="nav-item">
                 <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="about"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#about'}
                 >
                   About Me
                 </Link>
               </li>
-              
-              <li className="nav-item">
-                <RouterLInk
-                  className="nav-link "
-                  to={'/#about'}
-                >
-                  About Me
-                </RouterLInk>
-              </li>
               <li className="nav-item">
                 <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="services"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#services'}
                 >
                   What I Do
                 </Link>
@@ -108,35 +63,18 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               
               
               <li className="nav-item">
-                <Link
+              <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="resume"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#resume'}
                 >
                   Resume
                 </Link>
+                
               </li>
               <li className="nav-item">
-                <Link
+              <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="blog"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#blog'}
                 >
                   Blog
                 </Link>
@@ -144,16 +82,7 @@ const Header = ({ classicHeader, darkTheme, homeRef, handleNavClick }) => {
               <li className="nav-item">
                 <Link
                   className="nav-link "
-                  smooth
-                  duration={500}
-                  style={{ cursor: "pointer" }}
-                  activeClass="active"
-                  spy
-                  to="contact"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsNavModalClose(true);
-                  }}
+                  to={'/#contact'}
                 >
                   Contact
                 </Link>
